@@ -332,3 +332,22 @@ body { overflow-wrap: break-word; }
 .form-submit{justify-self:start;cursor:pointer}.form-status{margin:0;color:var(--color-gold);font-size:.82rem;line-height:1.6}
 @media(max-width:900px){.page-hero-grid,.purpose-grid,.audience-grid,.service-detail,.approach-intro-row,.insights-empty-grid,.contact-layout{grid-template-columns:1fr}.page-hero-image img{max-height:420px;aspect-ratio:1.5}.purpose-grid,.audience-grid{gap:2rem}.service-detail-visual{min-height:320px}.service-detail-reverse .service-detail-visual,.service-detail-reverse .service-detail-copy{order:initial}.principle-grid-five{grid-template-columns:repeat(2,minmax(0,1fr))}.insights-feature-image{height:350px}.contact-layout{gap:2rem}}
 @media(max-width:700px){.page-hero{padding-block:3.25rem}.page-hero h1{font-size:clamp(3rem,12vw,4.3rem)}.page-lead{font-size:.96rem}.principle-grid{grid-template-columns:1fr}.principle-card{min-height:0}.principle-card .item-number{margin-bottom:1.5rem}.page-cta-inner{align-items:stretch;flex-direction:column}.page-cta .button{width:100%}.service-detail{gap:1.5rem}.service-detail-visual{min-height:260px}.approach-intro-row{gap:1.5rem}.approach-image{height:240px}.approach-stage{grid-template-columns:1fr;gap:.65rem}.approach-stage h3{font-size:1.8rem}.principle-grid-five{grid-template-columns:1fr}.principle-grid-five .principle-card{min-height:0}.insights-categories{margin-bottom:2rem}.insights-feature-image{height:260px}.contact-image{height:230px}.contact-form-panel{padding:1.2rem}.form-submit{width:100%}}
+
+/* Dedicated consultation form: uses the existing Crestmark design system. */
+.consultation-form-section { background: var(--color-charcoal); }
+.consultation-form-layout { display: grid; grid-template-columns: minmax(0,.82fr) minmax(0,1fr); align-items: start; gap: clamp(2rem,6vw,6rem); }
+.consultation-form-intro { padding-top: .5rem; }
+.consultation-form-intro .section-heading { max-width: 520px; }
+.consultation-form-intro .page-copy { color: var(--color-muted); line-height: 1.85; }
+.consultation-privacy-note,.consultation-help { color: var(--color-muted); font-size: .78rem; line-height: 1.7; }
+.consultation-form-panel { min-width: 0; padding: clamp(1.3rem,3vw,2.5rem); border: 1px solid var(--color-border); background: #101010; }
+#consultation-form { display: grid; gap: 1.1rem; }
+#consultation-form .form-field input,#consultation-form .form-field select,#consultation-form .form-field textarea { min-height: 48px; font-size: 16px; }
+#consultation-form .form-field textarea { min-height: 130px; }
+#consultation-form .form-submit { justify-self: start; width: auto; }
+.consultation-error { margin: 0; color: #f0a7a0; font-size: .84rem; line-height: 1.6; }
+.consultation-help { margin: -.35rem 0 0; }
+.consultation-back { justify-self: start; }
+#consultation-form [aria-invalid="true"] { border-color: #f0a7a0; }
+@media(max-width:900px) { .consultation-form-layout { grid-template-columns: 1fr; gap: 2rem; } }
+@media(max-width:700px) { .consultation-form-panel { padding: 1.2rem; } #consultation-form .form-submit,.consultation-back { width: 100%; } }
