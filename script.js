@@ -89,7 +89,7 @@ if (consultationForm) {
       "",
       "Brief Description of Business Needs:",
       value(fields.needs)
-    ].join("\\n");
+    ].join("\n");
     const whatsappUrl = "https://wa.me/2348104750320?text=" + encodeURIComponent(message);
 
     isProcessing = true;
@@ -99,7 +99,8 @@ if (consultationForm) {
 
     let whatsappWindow = null;
     try {
-      whatsappWindow = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+      whatsappWindow = window.open(whatsappUrl, "_blank");
+      if (whatsappWindow) whatsappWindow.opener = null;
     } catch (openError) {
       whatsappWindow = null;
     }
