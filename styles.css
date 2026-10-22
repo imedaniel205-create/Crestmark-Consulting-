@@ -360,3 +360,6 @@ body { overflow-wrap: break-word; }
 @media (max-width: 900px) { .about-consultation-photo img { min-height: 300px; max-height: 420px; } }
 @media (max-width: 700px) { .brand { gap: .45rem; } .brand img { width: 42px; } .brand-name { font-size: .76rem; letter-spacing: .02em; } .about-consultation-photo img { min-height: 260px; max-height: 340px; object-position: center 42%; } }
 @media (max-width: 360px) { .brand { gap: .35rem; } .brand img { width: 36px; } .brand-name { font-size: .69rem; letter-spacing: 0; } }
+
+/* Preserve the uploaded growth chart's full proportions inside the existing visual container. */
+.service-detail-visual img.growth-chart-asset { object-fit: contain; }
