@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+<title id="title">Business growth chart</title>
+<desc id="desc">Champagne-gold bars and an upward-trending line on a dark background, representing strategic business growth.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#171612"/><stop offset="1" stop-color="#080808"/></linearGradient>
+  <linearGradient id="gold" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#8f7443"/><stop offset="1" stop-color="#e2c786"/></linearGradient>
+  <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#6e5732" stop-opacity=".52"/><stop offset="1" stop-color="#d6b574" stop-opacity=".88"/></linearGradient>
+</defs>
+<rect width="1200" height="900" fill="url(#bg)"/>
+<g stroke="#b69a63" stroke-opacity=".13" stroke-width="2">
+ <path d="M140 160H1060M140 300H1060M140 440H1060M140 580H1060M140 720H1060"/>
+</g>
+<path d="M140 150V720H1060" fill="none" stroke="#b69a63" stroke-opacity=".55" stroke-width="3"/>
+<g fill="url(#bar)" stroke="#d6b574" stroke-opacity=".45" stroke-width="2">
+ <rect x="220" y="585" width="105" height="135" rx="2"/>
+ <rect x="390" y="505" width="105" height="215" rx="2"/>
+ <rect x="560" y="410" width="105" height="310" rx="2"/>
+ <rect x="730" y="300" width="105" height="420" rx="2"/>
+ <rect x="900" y="205" width="105" height="515" rx="2"/>
+</g>
+<path d="M272 545L442 455L612 355L782 245L952 145" fill="none" stroke="#e3c681" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<g fill="#0b0b0a" stroke="#e3c681" stroke-width="7">
+ <circle cx="272" cy="545" r="10"/><circle cx="442" cy="455" r="10"/><circle cx="612" cy="355" r="10"/><circle cx="782" cy="245" r="10"/><circle cx="952" cy="145" r="10"/>
+</g>
+<path d="M912 145H952V185" fill="none" stroke="#e3c681" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
