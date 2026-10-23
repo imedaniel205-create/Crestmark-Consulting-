@@ -7,6 +7,7 @@
   --color-antique-gold: #B69A63;
   --color-white: #FFFFFF;
   --color-muted: #F5F3EE;
+  --color-slate: #667085;
   --color-border: rgba(182,154,99,.32);
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body: "Inter", Arial, sans-serif;
@@ -341,7 +342,7 @@ body { overflow-wrap: break-word; }
 .consultation-form-intro .section-heading { max-width: 520px; }
 .consultation-form-intro .page-copy { color: var(--color-muted); line-height: 1.85; }
 .consultation-privacy-note,.consultation-help { color: var(--color-muted); font-size: .78rem; line-height: 1.7; }
-.consultation-form-panel { min-width: 0; padding: clamp(1.3rem,3vw,2.5rem); border: 1px solid var(--color-border); background: #101010; }
+.consultation-form-panel { min-width: 0; padding: clamp(1.3rem,3vw,2.5rem); border: 1px solid var(--color-border); background: var(--color-charcoal); }
 #consultation-form { display: grid; gap: 1.1rem; }
 #consultation-form .form-field input,#consultation-form .form-field select,#consultation-form .form-field textarea { min-height: 48px; font-size: 16px; }
 #consultation-form .form-field textarea { min-height: 130px; }
