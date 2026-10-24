@@ -490,3 +490,92 @@ h1 em, .hero h1 em, .section-heading em, .consultation-inner h2 em,
   .hero-bottom { flex-wrap: wrap; gap: .5rem 1rem; }
   .hero-bottom > span:nth-child(2) { display: none; }
 }
+
+
+/* Cohesion refinement: stronger light/dark rhythm, shared brand hierarchy, no layout rebuild. */
+:root {
+  --color-muted: #48545B;
+}
+.hero,
+.approach-section {
+  background: var(--color-deep-blue);
+  color: #FFFFFF;
+}
+.hero { border-bottom: 0; }
+.hero .eyebrow,
+.approach-section .eyebrow,
+.approach-section .item-number { color: var(--color-sky); }
+.hero h1,
+.approach-section .section-heading,
+.approach-section .process-step h3 { color: #FFFFFF; }
+.hero h1 em,
+.approach-section .section-heading em { color: var(--color-sky); }
+.hero-description,
+.hero-bottom,
+.approach-section .section-intro > p,
+.approach-section .process-step p { color: #EAF1F5; }
+.hero-bottom { border-top-color: rgba(255,255,255,.24); }
+.hero .button-secondary {
+  border-color: var(--color-sky);
+  color: #FFFFFF;
+}
+.hero .button-secondary:hover { background: rgba(135,189,232,.14); color: #FFFFFF; }
+.positioning { background: var(--color-beige); }
+.position-item { border-color: rgba(36,71,101,.2); }
+.about-section { background: var(--color-ivory); }
+.services-section { background: var(--color-beige); }
+.service-card { background: var(--color-ivory); }
+.service-card:hover { background: #FFFFFF; }
+.approach-section .process-step { border-color: rgba(255,255,255,.2); }
+.approach-section .process-line { background: var(--color-sky); }
+.consultation-section,
+.page-cta {
+  background: var(--color-deep-blue);
+  color: #FFFFFF;
+  border-color: rgba(255,255,255,.18);
+}
+.consultation-inner .eyebrow,
+.page-cta .eyebrow { color: var(--color-sky); }
+.consultation-inner h2,
+.page-cta h2 { color: #FFFFFF; }
+.consultation-inner h2 em,
+.page-cta h2 em { color: var(--color-sky); }
+.consultation-bottom p,
+.page-cta-inner>div>p:not(.eyebrow) { color: #EAF1F5; }
+.page-cta .button-primary { background: var(--color-sky); color: #17364F; }
+.page-cta .button-primary:hover { background: #FFFFFF; color: var(--color-deep-blue); }
+.page-hero-compact {
+  background: var(--color-deep-blue);
+  color: #FFFFFF;
+  border-bottom: 0;
+}
+.page-hero-compact .eyebrow { color: var(--color-sky); }
+.page-hero-compact h1 { color: #FFFFFF; }
+.page-hero-compact h1 em { color: var(--color-sky); }
+.page-hero-compact .page-lead { color: #EAF1F5; }
+.page-hero-compact .container { padding-block: clamp(3.5rem, 7vw, 6rem); }
+.page-hero-compact .page-hero-grid { padding-block: 0; }
+.page-hero:not(.page-hero-compact) { background: var(--color-ivory); }
+.principles-section { background: var(--color-sky); }
+.principles-section .section-heading,
+.principles-section .section-intro > p { color: var(--color-deep-blue); }
+.principle-card { background: var(--color-ivory); }
+.service-detail-section { background: var(--color-ivory); }
+.service-detail:nth-child(even) { background: rgba(232,220,200,.34); }
+.service-detail-copy { padding: clamp(1.5rem, 3vw, 3rem); }
+.contact-page-section,
+.consultation-form-section { background: var(--color-beige); }
+.contact-form-panel,
+.consultation-form-panel { background: var(--color-ivory); }
+.site-footer { background: var(--color-deep-blue); }
+.site-footer .footer-brand p,
+.site-footer .footer-column a,
+.site-footer .footer-bottom { color: #EAF1F5; }
+.site-footer .footer-column h2 { color: #FFFFFF; }
+.site-footer .footer-logo { display: inline-block; }
+.site-footer .footer-logo img { max-width: 84px; }
+@media (max-width: 700px) {
+  .hero-grid { padding-block: 3.75rem; }
+  .page-hero-compact .container { padding-block: 3rem; }
+  .service-detail-copy { padding: 1.25rem 0; }
+}
