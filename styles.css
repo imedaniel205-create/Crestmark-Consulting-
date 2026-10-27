@@ -262,7 +262,6 @@ body { overflow-wrap: break-word; }
   .process-grid { grid-template-columns: 1fr; margin-top: 2.5rem; border-top: 0; }
   .process-step, .process-step + .process-step { display: grid; grid-template-columns: 48px 1fr; column-gap: 1rem; padding: 1.2rem 0; border-left: 0; border-top: 1px solid var(--color-border); }
   .process-number { grid-column: 1; grid-row: 1 / span 2; font-size: 2rem; }
-  .process-line { grid-column: 2; grid-row: 1; width: 100%; margin: .7rem 0 1rem; }
   .process-step h3 { grid-column: 2; grid-row: 2; font-size: 1.7rem; }
   .process-step p { grid-column: 2; grid-row: 3; margin-top: .4rem; }
   .insights-heading { font-size: .53rem; }
@@ -432,7 +431,6 @@ h1 em, .hero h1 em, .section-heading em, .consultation-inner h2 em,
 .card-top { border-bottom: 1px solid var(--color-border); }
 .approach-section { background: #FFFFFF; }
 .process-step + .process-step { border-color: var(--color-border); }
-.process-line { background: var(--color-sky); }
 .consultation-section { background: var(--color-beige); border-top: 1px solid var(--color-border); }
 .consultation-section::after { display: none; }
 .consultation-inner h2 { color: var(--color-deep-blue); }
@@ -520,7 +518,6 @@ h1 em, .hero h1 em, .section-heading em, .consultation-inner h2 em,
 .service-card { background: var(--color-ivory); }
 .service-card:hover { background: #FFFFFF; }
 .approach-section .process-step { border-color: rgba(255,255,255,.2); }
-.approach-section .process-line { background: var(--color-sky); }
 .consultation-section,
 .page-cta {
   background: var(--color-deep-blue);
