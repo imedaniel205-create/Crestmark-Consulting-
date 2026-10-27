@@ -177,7 +177,6 @@ body { overflow-wrap: break-word; }
 .process-step { min-width: 0; padding: 1.1rem 0 1rem; }
 .process-step + .process-step { padding-left: 0; border-left: 0; }
 .process-number { color: var(--color-gold); font: 500 2.5rem/1 var(--font-display); }
-.process-line { display: none; }
 .process-step h3 { margin: 1.35rem 0 .65rem; font: 500 1.8rem var(--font-display); }
 .process-step p { max-width: 29ch; margin: 0; color: var(--color-muted); font-size: .88rem; line-height: 1.8; }
 .approach-link { margin-top: 2.5rem; }
