@@ -5,6 +5,8 @@ if (menuButton && navigation) {
   const setMenuOpen = (isOpen) => {
     menuButton.setAttribute("aria-expanded", String(isOpen));
     menuButton.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+    const menuLabel = menuButton.querySelector(".sr-only");
+    if (menuLabel) menuLabel.textContent = isOpen ? "Close menu" : "Open menu";
     navigation.classList.toggle("is-open", isOpen);
   };
 
