@@ -640,3 +640,11 @@ h1 em, .hero h1 em, .section-heading em, .consultation-inner h2 em,
   .footer-brand-name { font-size: 1rem; }
   .footer-brand p { font-size: .75rem; }
 }
+
+/* Final homepage CTA: restore a visible border on this button only. */
+.consultation-section .consultation-bottom > .button-primary {
+  border: 1px solid var(--color-sky);
+}
+.consultation-section .consultation-bottom > .button-primary:hover {
+  border-color: #FFFFFF;
+}
