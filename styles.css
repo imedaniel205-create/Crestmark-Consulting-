@@ -648,3 +648,58 @@ h1 em, .hero h1 em, .section-heading em, .consultation-inner h2 em,
 .consultation-section .consultation-bottom > .button-primary:hover {
   border-color: #FFFFFF;
 }
+
+
+/* Homepage refinements: tighter hero alignment and deliberate closing-section colour rhythm. */
+.hero-grid {
+  align-items: start;
+  padding-block: clamp(2.75rem, 5vw, 4.5rem) clamp(3rem, 5vw, 5rem);
+}
+.hero-copy { padding-block: 0; }
+.approach-section {
+  background: var(--color-ivory);
+  color: var(--color-white);
+}
+.approach-section .eyebrow,
+.approach-section .item-number { color: var(--color-deep-blue); }
+.approach-section .section-heading,
+.approach-section .process-step h3 { color: var(--color-deep-blue); }
+.approach-section .section-heading em { color: var(--color-deep-blue); }
+.approach-section .section-intro > p,
+.approach-section .process-step p { color: var(--color-muted); }
+.approach-section .process-step,
+.approach-section .process-step + .process-step { border-color: var(--color-border); }
+.consultation-section {
+  background: var(--color-deep-blue);
+  color: #FFFFFF;
+}
+.consultation-section .consultation-bottom > .button-primary {
+  border: 1px solid var(--color-sky);
+}
+.consultation-section .consultation-bottom > .button-primary:hover {
+  border-color: #FFFFFF;
+}
+.footer-brand {
+  grid-template-columns: 68px minmax(0, 1fr);
+  align-items: center;
+}
+.footer-brand-copy { min-width: 0; }
+.footer-brand-name {
+  display: block;
+  color: #FFFFFF;
+  font: 800 1.12rem/1.25 var(--font-display);
+  letter-spacing: .015em;
+  overflow-wrap: anywhere;
+}
+.site-footer .footer-brand p {
+  margin: .35rem 0 0;
+  color: #EAF1F5;
+  font: 400 .78rem/1.55 var(--font-body);
+}
+@media (max-width: 700px) {
+  .hero-grid { padding-block: 2.75rem 2.5rem; }
+  .footer-brand { grid-template-columns: 60px minmax(0, 1fr); gap: .75rem; }
+  .footer-logo { width: 60px; }
+  .footer-brand-name { font-size: .95rem; }
+  .site-footer .footer-brand p { font-size: .74rem; }
+}
