@@ -40,7 +40,43 @@ if (enquiryForm) {
       if (status) status.textContent = "Please complete the required fields and check the email address.";
       return;
     }
-    if (status) status.textContent = "Your details have not been sent. This form is not connected to an enquiry service yet. Keep this page open if you need to retain your entries.";
+
+    const fields = {
+      fullName: enquiryForm.elements.fullName,
+      email: enquiryForm.elements.email,
+      company: enquiryForm.elements.company,
+      interest: enquiryForm.elements.interest,
+      message: enquiryForm.elements.message
+    };
+    const value = (field) => field.value.trim();
+    const enquiryMessage = [
+      "Good day, Crestmark Consulting. I would like to make an enquiry.",
+      "",
+      "Full Name: " + value(fields.fullName),
+      "Business Email: " + value(fields.email),
+      "Company: " + (value(fields.company) || "Not provided"),
+      "Area of Interest: " + value(fields.interest),
+      "",
+      "Message:",
+      value(fields.message)
+    ].join("\n");
+    const whatsappUrl = "https://wa.me/2348104750320?text=" + encodeURIComponent(enquiryMessage);
+    const whatsappWindow = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+
+    if (whatsappWindow) {
+      if (status) status.textContent = "WhatsApp has opened with your enquiry draft. Review the details and send the message in WhatsApp to complete your enquiry.";
+    } else {
+      if (status) {
+        status.textContent = "Your enquiry is ready, but the WhatsApp window may have been blocked. ";
+        const fallback = document.createElement("a");
+        fallback.href = whatsappUrl;
+        fallback.target = "_blank";
+        fallback.rel = "noopener noreferrer";
+        fallback.className = "text-link";
+        fallback.textContent = "Open WhatsApp enquiry draft";
+        status.appendChild(fallback);
+      }
+    }
   });
 }
 
