@@ -703,3 +703,119 @@ h1 em, .hero h1 em, .section-heading em, .consultation-inner h2 em,
   .footer-brand-name { font-size: .95rem; }
   .site-footer .footer-brand p { font-size: .74rem; }
 }
+
+
+/* Final design-system pass: precise palette, readable type, and restrained motion. */
+:root {
+  --color-sky: #87BDE8;
+  --color-deep-blue: #244765;
+  --color-beige: #E8DCC8;
+  --color-ivory: #FAF8F3;
+  --color-terracotta: #C47D5A;
+  --color-white: #263238;
+  --color-muted: #48545B;
+  --color-border: rgba(36, 71, 101, .2);
+  --font-display: "Manrope", Arial, sans-serif;
+  --font-body: "Inter", Arial, sans-serif;
+  --focus-ring: 0 0 0 3px #FAF8F3, 0 0 0 5px #244765;
+}
+html { scroll-behavior: smooth; }
+body { color: #263238; background: #FAF8F3; }
+h1, h2, h3, .section-heading, .service-card h3, .process-step h3 {
+  font-family: var(--font-display);
+  text-wrap: pretty;
+}
+p { text-wrap: pretty; }
+.hero-grid { align-items: center; }
+.hero h1 { max-width: 13ch; font-weight: 800; }
+.hero-description { max-width: 54ch; }
+.services-section {
+  background: #87BDE8;
+  color: #244765;
+  border-color: rgba(36, 71, 101, .18);
+}
+.services-section .eyebrow,
+.services-section .section-heading,
+.services-section .section-heading em,
+.services-section .section-intro > p { color: #244765; }
+.service-card {
+  background: #FAF8F3;
+  border-color: rgba(36, 71, 101, .2);
+  color: #263238;
+  box-shadow: 0 8px 28px rgba(36, 71, 101, .06);
+}
+.service-card h3 { color: #244765; }
+.service-card p { color: #48545B; }
+.service-card .text-link { color: #244765; }
+.service-card:hover {
+  background: #FFFFFF;
+  border-color: #244765;
+  transform: translateY(-3px);
+}
+.approach-section {
+  background: #FAF8F3;
+  color: #263238;
+  border-block: 1px solid rgba(36, 71, 101, .12);
+}
+.approach-section .eyebrow,
+.approach-section .item-number,
+.approach-section .process-number { color: #244765; }
+.approach-section .section-heading,
+.approach-section .section-heading em,
+.approach-section .process-step h3 { color: #244765; }
+.approach-section .section-intro > p,
+.approach-section .process-step p { color: #48545B; }
+.approach-section .process-step,
+.approach-section .process-step + .process-step { border-color: rgba(36, 71, 101, .2); }
+.approach-section .approach-link { color: #244765; }
+.consultation-section {
+  background: #244765;
+  color: #FFFFFF;
+}
+.consultation-section .consultation-inner h2,
+.consultation-section .consultation-inner h2 em { color: #FFFFFF; }
+.consultation-section .consultation-inner .eyebrow { color: #87BDE8; }
+.consultation-section .consultation-bottom p { color: #F0F5F8; }
+.consultation-section .consultation-bottom > .button-primary {
+  background: #87BDE8;
+  color: #17364F;
+  border: 1px solid #87BDE8;
+}
+.consultation-section .consultation-bottom > .button-primary:hover {
+  background: #FFFFFF;
+  color: #244765;
+  border-color: #FFFFFF;
+}
+.site-header { background: rgba(250, 248, 243, .96); }
+.brand-name { font-family: var(--font-display); }
+.button, .service-card, .primary-nav > a, .text-link {
+  transition-duration: 180ms;
+}
+:focus-visible { outline: 3px solid #C47D5A; outline-offset: 3px; box-shadow: none; }
+::selection { color: #FFFFFF; background: #244765; }
+@media (prefers-reduced-motion: no-preference) {
+  .motion-ready [data-reveal] {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 520ms ease, transform 520ms ease;
+  }
+  .motion-ready [data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .motion-ready [data-reveal-delay="1"] { transition-delay: 80ms; }
+  .motion-ready [data-reveal-delay="2"] { transition-delay: 150ms; }
+  .motion-ready [data-reveal-delay="3"] { transition-delay: 220ms; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .service-card:hover { transform: none; }
+  [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+@media (max-width: 700px) {
+  .hero-grid { padding-block: 3.25rem 2.5rem; }
+  .hero h1 { font-size: clamp(2.75rem, 11vw, 4.25rem); }
+  .services-section .section-intro { grid-template-columns: 1fr; }
+  .consultation-bottom { align-items: flex-start; flex-direction: column; }
+  .consultation-bottom .button { width: 100%; }
+}
