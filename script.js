@@ -61,7 +61,13 @@ if (enquiryForm) {
       value(fields.message)
     ].join("\n");
     const whatsappUrl = "https://wa.me/2348104750320?text=" + encodeURIComponent(enquiryMessage);
-    const whatsappWindow = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    let whatsappWindow = null;
+    try {
+      whatsappWindow = window.open(whatsappUrl, "_blank");
+      if (whatsappWindow) whatsappWindow.opener = null;
+    } catch (openError) {
+      whatsappWindow = null;
+    }
 
     if (whatsappWindow) {
       if (status) status.textContent = "WhatsApp has opened with your enquiry draft. Review the details and send the message in WhatsApp to complete your enquiry.";
