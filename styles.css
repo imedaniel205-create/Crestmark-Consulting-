@@ -890,3 +890,17 @@ body .hero .hero-copy > p.eyebrow {
   width: 100%;
   text-align: center !important;
 }
+
+
+/* Final alignment fix: remove the inline decorative line from this label.
+   Its width was shifting the text itself off the visual centre. */
+body .hero .hero-copy > p.eyebrow {
+  display: block !important;
+  width: 100% !important;
+  margin-inline: 0 !important;
+  padding: 0 !important;
+  text-align: center !important;
+}
+body .hero .hero-copy > p.eyebrow .eyebrow-line {
+  display: none !important;
+}
