@@ -874,3 +874,19 @@ body .hero .hero-copy > p.eyebrow .eyebrow-line {
   vertical-align: middle;
   margin-right: .8rem;
 }
+
+
+/* Align the homepage hero content column to the viewport centre.
+   The eyebrow is then centred against the page, not a left-offset column. */
+body .hero .hero-copy {
+  width: 100%;
+  max-width: 850px;
+  margin-inline: auto !important;
+}
+body .hero .hero-copy > p.eyebrow {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
+  width: 100%;
+  text-align: center !important;
+}
