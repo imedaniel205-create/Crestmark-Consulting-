@@ -852,3 +852,10 @@ p { text-wrap: pretty; }
     padding-block: 2rem;
   }
 }
+
+
+/* Center the homepage eyebrow above the main headline. */
+.hero-copy > .eyebrow {
+  justify-content: center;
+  text-align: center;
+}
