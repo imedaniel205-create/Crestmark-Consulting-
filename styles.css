@@ -819,3 +819,22 @@ p { text-wrap: pretty; }
   .consultation-bottom { align-items: flex-start; flex-direction: column; }
   .consultation-bottom .button { width: 100%; }
 }
+
+
+/* Services page: keep the warm beige accent limited to the image caption.
+   Do not let alternating service panels extend behind the written content. */
+.service-detail-section .service-detail,
+.service-detail-section .service-detail:nth-child(even) {
+  background: transparent;
+}
+.service-detail-section .service-detail-copy {
+  background: var(--color-ivory);
+}
+.service-detail-section .service-detail-visual > span {
+  background: var(--color-beige);
+}
+@media (max-width: 700px) {
+  .service-detail-section .service-detail-copy {
+    padding: 1.5rem 0 0;
+  }
+}
