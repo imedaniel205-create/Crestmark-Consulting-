@@ -838,3 +838,17 @@ p { text-wrap: pretty; }
     padding: 1.5rem 0 0;
   }
 }
+
+
+/* Services page: reduce the oversized space above the page heading. */
+.page-hero-compact {
+  padding-block: clamp(2rem, 4vw, 3.5rem);
+}
+.page-hero-compact .container {
+  padding-block: 0;
+}
+@media (max-width: 700px) {
+  .page-hero-compact {
+    padding-block: 2rem;
+  }
+}
