@@ -904,3 +904,14 @@ body .hero .hero-copy > p.eyebrow {
 body .hero .hero-copy > p.eyebrow .eyebrow-line {
   display: none !important;
 }
+
+
+/* Official Crestmark logo: preserve the source image's square proportions. */
+.site-header .brand img,
+.site-footer .footer-logo img {
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  object-position: center;
+  filter: none;
+}
